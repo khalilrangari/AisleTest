@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".DisCover.DisCoverFragment">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/glStart"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="@dimen/dimen_20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/glEnd"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_end="@dimen/dimen_20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/glCenter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvNote"
+      style="@style/Text.black.27sp.gilroy_extra_bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen_40dp"
+      android:text="@string/notes"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvPersonalMessages"
+      style="@style/Text.black.18sp.gilroy_semi_bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen_10dp"
+      android:text="@string/personalMessagesToYou"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvNote" />
+
+    <androidx.cardview.widget.CardView
+      android:id="@+id/cvProfile"
+      android:layout_width="@dimen/dimen_0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen_10dp"
+      app:cardCornerRadius="@dimen/dimen_10dp"
+      app:layout_constraintEnd_toEndOf="@+id/glEnd"
+      app:layout_constraintStart_toStartOf="@+id/glStart"
+      app:layout_constraintTop_toBottomOf="@+id/tvPersonalMessages">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivProfile"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/dimen_300dp"
+          android:scaleType="fitXY"
+          android:src="@drawable/splash_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvNameAge"
+          style="@style/Text.white.22sp.gilroy_extra_bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/dimen_225dp"
+          android:paddingStart="@dimen/dimen_20dp"
+          android:paddingLeft="@dimen/dimen_20dp"
+          android:paddingEnd="@dimen/dimen_20dp"
+          android:paddingRight="@dimen/dimen_20dp"
+          android:text="@string/personalMessagesToYou" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvReviewNotes"
+          style="@style/Text.white.15sp.gilroy_semi_bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_marginTop="@dimen/dimen_10dp"
+          android:layout_marginBottom="@dimen/dimen_10dp"
+          android:paddingStart="@dimen/dimen_20dp"
+          android:paddingLeft="@dimen/dimen_20dp"
+          android:paddingEnd="@dimen/dimen_20dp"
+          android:paddingRight="@dimen/dimen_20dp"
+          android:paddingBottom="@dimen/dimen_20dp"
+          android:text="@string/tapToReview" />
+
+      </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvInterestedInYou"
+      style="@style/Text.black.22sp.gilroy_semi_bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen_10dp"
+      android:paddingStart="@dimen/dimen_20dp"
+      android:paddingLeft="@dimen/dimen_20dp"
+      android:paddingEnd="@dimen/dimen_20dp"
+      android:paddingRight="@dimen/dimen_20dp"
+      android:text="@string/interestedInYou"
+      app:layout_constraintStart_toStartOf="@+id/cvProfile"
+      app:layout_constraintTop_toBottomOf="@+id/cvProfile" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvInterestedDetails"
+      style="@style/Text.color_C4C4C4.15sp.gilroy_semi_bold"
+      android:layout_width="@dimen/dimen_0dp"
+      android:layout_height="wrap_content"
+      android:paddingStart="@dimen/dimen_20dp"
+      android:paddingLeft="@dimen/dimen_20dp"
+      android:paddingEnd="@dimen/dimen_20dp"
+      android:paddingRight="@dimen/dimen_20dp"
+      android:text="@string/interestedDetails"
+      app:layout_constraintEnd_toStartOf="@id/btnContinue"
+      app:layout_constraintStart_toStartOf="@+id/cvProfile"
+      app:layout_constraintTop_toBottomOf="@+id/tvInterestedInYou" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/btnContinue"
+      style="@style/Text.black.14sp.gilroy_extra_bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/rounded_btn_yellow"
+      android:paddingStart="@dimen/dimen_16dp"
+      android:paddingLeft="@dimen/dimen_16dp"
+      android:paddingTop="@dimen/dimen_10dp"
+      android:paddingEnd="@dimen/dimen_16dp"
+      android:paddingRight="@dimen/dimen_16dp"
+      android:paddingBottom="@dimen/dimen_10dp"
+      android:text="@string/upgrade"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@id/glEnd"
+      app:layout_constraintStart_toEndOf="@+id/glCenter"
+      app:layout_constraintTop_toBottomOf="@+id/tvInterestedInYou" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvLinks"
+      android:layout_width="@dimen/dimen_0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="@id/glEnd"
+      app:layout_constraintStart_toStartOf="@+id/glStart"
+      app:layout_constraintTop_toBottomOf="@+id/tvInterestedDetails" />
+
+    <ProgressBar
+      android:id="@+id/progressBar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:indeterminate="true"
+      android:progressTint="@color/black"
+      android:theme="@style/progressBarBlack"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

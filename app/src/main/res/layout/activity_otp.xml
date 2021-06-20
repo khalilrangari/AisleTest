@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".PhoneNumberScreen.PhoneNumberActivity">
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/glLeft"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_begin="@dimen/dimen_30dp" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/glCenter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.7" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/glTop"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="@dimen/dimen_80dp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tvMobileNo"
+    style="@style/Text.black.18sp.gilroy_semi_bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/getOtp"
+    app:layout_constraintStart_toEndOf="@+id/glLeft"
+    app:layout_constraintTop_toBottomOf="@+id/glTop" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/ivEditNumber"
+    android:layout_width="@dimen/dimen_40dp"
+    android:layout_height="@dimen/dimen_40dp"
+    android:padding="@dimen/dimen_10dp"
+    android:src="@drawable/ic_edit_mobile_no"
+    app:layout_constraintStart_toEndOf="@+id/tvMobileNo"
+    app:layout_constraintTop_toTopOf="@+id/tvMobileNo"
+    app:layout_constraintBottom_toBottomOf="@+id/tvMobileNo"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tvEnterOTP"
+    style="@style/Text.black.30sp.gilroy_extra_bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    android:text="@string/enterTheOtp"
+    app:layout_constraintStart_toEndOf="@+id/glLeft"
+    app:layout_constraintTop_toBottomOf="@+id/tvMobileNo" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/etOtp"
+    style="@style/Text.black.18sp.gilroy_extra_bold"
+    android:layout_width="@dimen/dimen_80dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_16dp"
+    android:background="@drawable/squer_with_rounded_corner"
+    android:paddingStart="@dimen/dimen_16dp"
+    android:paddingLeft="@dimen/dimen_16dp"
+    android:paddingTop="@dimen/dimen_6dp"
+    android:paddingEnd="@dimen/dimen_16dp"
+    android:paddingRight="@dimen/dimen_16dp"
+    android:paddingBottom="@dimen/dimen_6dp"
+    android:text="1234"
+    android:gravity="center_horizontal"
+    android:inputType="number"
+    android:textCursorDrawable="@drawable/custom_cursor_drawable"
+    android:textStyle="bold"
+    android:maxLength="4"
+    app:layout_constraintStart_toEndOf="@+id/glLeft"
+    app:layout_constraintTop_toBottomOf="@+id/tvEnterOTP" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/btnContinue"
+    style="@style/Text.black.14sp.gilroy_extra_bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_16dp"
+    android:background="@drawable/rounded_btn_yellow"
+    android:paddingStart="@dimen/dimen_16dp"
+    android:paddingLeft="@dimen/dimen_16dp"
+    android:paddingTop="@dimen/dimen_10dp"
+    android:paddingEnd="@dimen/dimen_16dp"
+    android:paddingRight="@dimen/dimen_16dp"
+    android:paddingBottom="@dimen/dimen_10dp"
+    android:text="@string/continue_btn"
+    android:textStyle="bold"
+    app:layout_constraintStart_toEndOf="@+id/glLeft"
+    app:layout_constraintTop_toBottomOf="@+id/etOtp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tvTime"
+    style="@style/Text.black.18sp.gilroy_semi_bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="00:59"
+    android:layout_marginStart="@dimen/dimen_16dp"
+    android:layout_marginLeft="@dimen/dimen_16dp"
+    app:layout_constraintStart_toEndOf="@+id/btnContinue"
+    app:layout_constraintTop_toTopOf="@+id/btnContinue"
+    app:layout_constraintBottom_toBottomOf="@+id/btnContinue"/>
+
+  <ProgressBar
+    android:id="@+id/progressBar"
+    android:theme="@style/progressBarBlack"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:progressTint="@color/black"
+    android:indeterminate="true"
+    android:visibility="gone"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

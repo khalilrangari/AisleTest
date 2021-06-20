@@ -1,0 +1,22 @@
+<resources>
+  <string name="app_name">AisleTest</string>
+  <string name="appName">Aisle</string>
+  <string name="Welcome_to_aisle">Welcome To</string>
+  <string name="getOtp">Get OTP</string>
+  <string name="enterYourPhoneNumber">Enter Your\nPhone Number</string>
+  <string name="phoneNumber">Phone Number</string>
+  <string name="continue_btn">Continue</string>
+  <string name="enterTheOtp">Enter The\nOTP</string>
+  <string name="inValidMobileNumber">Mobile Number is not valid.</string>
+  <string name="emptyMobileNumber">Please Enter Your Mobile Number.</string>
+  <string name="resend">Resend</string>
+  <string name="inValidLengthOtp">please enter 4 digit OTP</string>
+  <string name="inValidOtp">please enter valid OTP 1234</string>
+  <string name="notes">Notes</string>
+  <string name="personalMessagesToYou">Personal messages to you</string>
+  <string name="tapToReview">Tap to review 50+ notes</string>
+  <string name="interestedInYou">Interested In You</string>
+  <string name="interestedDetails">Premium members can\nview all their likes at once </string>
+  <string name="upgrade">Upgrade</string>
+  <string name="somethingWrong">Something is wrong please try again.</string>
+</resources>
